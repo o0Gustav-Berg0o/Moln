@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moln.WeatherApi", "Moln.WeatherApi\Moln.WeatherApi.csproj", "{68B7CC9D-7556-408F-8511-E5706A103739}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moln.KeyVault", "Moln.KeyVault\Moln.KeyVault.csproj", "{708BB7E4-F39F-4015-B047-B0F00864842C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{68B7CC9D-7556-408F-8511-E5706A103739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68B7CC9D-7556-408F-8511-E5706A103739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68B7CC9D-7556-408F-8511-E5706A103739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708BB7E4-F39F-4015-B047-B0F00864842C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708BB7E4-F39F-4015-B047-B0F00864842C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708BB7E4-F39F-4015-B047-B0F00864842C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708BB7E4-F39F-4015-B047-B0F00864842C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
