@@ -1,0 +1,6 @@
+@Moln.WebApi.ConnectDemo_HostAddress = http://localhost:5001
+
+GET {{Moln.WebApi.ConnectDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

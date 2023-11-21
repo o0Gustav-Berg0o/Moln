@@ -7,6 +7,7 @@ namespace Moln.KeyVault
 {
     public class Program
     {
+        public static SecretClient _client;
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,7 @@ namespace Moln.KeyVault
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //Key vault code
+            //Key vault credential code
 
             var keyVaultURL = builder.Configuration.GetSection("KeyVault:KeyVaultURL");
             var keyVaultClientId = builder.Configuration.GetSection("KeyVault:ClientId");
@@ -31,9 +32,11 @@ namespace Moln.KeyVault
 
             var client = new SecretClient(new Uri(keyVaultURL.Value!.ToString()), credential);
 
-            string keyVaultUrl = "https://bobo.vault.azure.net/";
+            //Key vault test code
+
             string secretName = "Gustav";
-           
+
+            _client = client;
 
             try
             {
@@ -45,9 +48,6 @@ namespace Moln.KeyVault
             {
                 Console.WriteLine($"Error retrieving secret: {ex.Message}");
             }
-
-          
-
 
             var app = builder.Build();
 

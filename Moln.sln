@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moln.WeatherApi", "Moln.WeatherApi\Moln.WeatherApi.csproj", "{68B7CC9D-7556-408F-8511-E5706A103739}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moln.WeatherApi", "Moln.WeatherApi\Moln.WeatherApi.csproj", "{68B7CC9D-7556-408F-8511-E5706A103739}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moln.KeyVault", "Moln.KeyVault\Moln.KeyVault.csproj", "{708BB7E4-F39F-4015-B047-B0F00864842C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moln.KeyVault", "Moln.KeyVault\Moln.KeyVault.csproj", "{708BB7E4-F39F-4015-B047-B0F00864842C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moln.WebApi.ConnectDemo", "Moln.WebApi.ConnectDemo\Moln.WebApi.ConnectDemo.csproj", "{3EC3DBCF-71F7-4284-8ADF-0E458D686CDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{708BB7E4-F39F-4015-B047-B0F00864842C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{708BB7E4-F39F-4015-B047-B0F00864842C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{708BB7E4-F39F-4015-B047-B0F00864842C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC3DBCF-71F7-4284-8ADF-0E458D686CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC3DBCF-71F7-4284-8ADF-0E458D686CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC3DBCF-71F7-4284-8ADF-0E458D686CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC3DBCF-71F7-4284-8ADF-0E458D686CDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
