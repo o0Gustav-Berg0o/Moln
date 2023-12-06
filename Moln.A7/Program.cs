@@ -1,8 +1,7 @@
-
 using Microsoft.EntityFrameworkCore;
-using Moln.WebApi.ConnectDemo.Data;
+using Moln.A7.Data;
 
-namespace Moln.WebApi.ConnectDemo
+namespace Moln.A7
 {
     public class Program
     {
@@ -16,22 +15,22 @@ namespace Moln.WebApi.ConnectDemo
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<SqlContext>(options =>
-            {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("Default"), providerOptions => providerOptions.EnableRetryOnFailure());
-                options.EnableSensitiveDataLogging(true);
-            });
+
+
+            ///Lägg till
+            string connectionString = builder.Configuration.GetConnectionString("Default");
+            builder.Services.AddDbContext<SqlContext>(optionsBuilder => optionsBuilder.UseSqlServer(connectionString));
+            ///
+
             var app = builder.Build();
 
+         
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
-
-              
+                app.UseSwaggerUI();              
             }
-
 
             app.UseHttpsRedirection();
 
