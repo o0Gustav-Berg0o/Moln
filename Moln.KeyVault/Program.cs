@@ -25,6 +25,7 @@ namespace Moln.KeyVault
             var keyVaultClientId = builder.Configuration.GetSection("KeyVault:ClientId");
             var keyVaultClientSecret = builder.Configuration.GetSection("KeyVault:ClientSecret");
             var keyVaultDirectoryID = builder.Configuration.GetSection("KeyVault:DirectoryID");
+            var secretName = builder.Configuration.GetSection("SecretName").ToString();
 
             var credential = new ClientSecretCredential(keyVaultDirectoryID.Value!.ToString(), keyVaultClientId.Value!.ToString(), keyVaultClientSecret.Value!.ToString());
 
@@ -34,7 +35,7 @@ namespace Moln.KeyVault
 
             //Key vault test code
 
-            string secretName = "Gustav";
+          
 
             _client = client;
 
