@@ -13,7 +13,7 @@ namespace Moln.WeatherApi.Controllers
 
         private static readonly string[] Summaries = new[]
       {
-        "Popsicle Mode", "Goosebump Galore", "Ice Cream Brain", "Frosty Flair", "Winter is coming", "Lukewarm Lovin", "Sizzle Fiesta", "Hotter the vulcano", "Im melting", "Scorching earth"
+        "Popsicle Mode", "Bob2", "Ice Cream Brain", "Frosty Flair", "Winter is coming", "Lukewarm Lovin", "Sizzle Fiesta", "Hotter the vulcano", "Im melting", "Scorching earth"
     };
 
         private readonly ILogger<WeatherForecastController> _logger;

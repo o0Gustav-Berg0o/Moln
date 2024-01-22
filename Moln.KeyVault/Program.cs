@@ -19,13 +19,14 @@ namespace Moln.KeyVault
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //Key vault credential code
 
+
+            //Key vault credential code
             var keyVaultURL = builder.Configuration.GetSection("KeyVault:KeyVaultURL");
             var keyVaultClientId = builder.Configuration.GetSection("KeyVault:ClientId");
             var keyVaultClientSecret = builder.Configuration.GetSection("KeyVault:ClientSecret");
             var keyVaultDirectoryID = builder.Configuration.GetSection("KeyVault:DirectoryID");
-            var secretName = builder.Configuration.GetSection("SecretName").ToString();
+            var secretName = builder.Configuration.GetSection("KeyVault:SecretName");
 
             var credential = new ClientSecretCredential(keyVaultDirectoryID.Value!.ToString(), keyVaultClientId.Value!.ToString(), keyVaultClientSecret.Value!.ToString());
 
@@ -41,7 +42,7 @@ namespace Moln.KeyVault
 
             try
             {
-                KeyVaultSecret secret = client.GetSecret(secretName);
+                KeyVaultSecret secret = client.GetSecret(secretName.Value!.ToString());
 
                 Console.WriteLine($"Retrieved secret '{secret.Name}': {secret.Value}");
             }
