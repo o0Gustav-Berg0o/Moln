@@ -18,11 +18,27 @@ namespace Moln.WebApi.ConnectDemo.Controllers
             _logger = logger;
         }   
 
-        [HttpGet(Name = "Users")]
-        public async Task<ActionResult<IEnumerable<User>>> Get()
+        //[HttpGet(Name = "Users")]
+        //public async Task<ActionResult<IEnumerable<User>>> Get()
+        //{
+        //    var result = await _context.Users.ToListAsync();
+        //    return Ok(result);
+        //}
+        [HttpGet]
+        public string Get()
         {
-            var result = await _context.Users.ToListAsync();
-            return Ok(result);
+            if (!_context.Users.Any())
+            {
+                _context.Users.Add(new User { Names = "Bob" });
+                _context.Users.Add(new User { Names = "Snobb" });
+                _context.SaveChanges();
+                return "Skapat 2 users";
+            }
+            else
+            {
+                return "En get kördes men inga users skapades";
+            }
         }
-    }
+    };
 }
+
