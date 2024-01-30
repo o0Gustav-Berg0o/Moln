@@ -1,0 +1,6 @@
+@Connectdemo8_HostAddress = http://localhost:5097
+
+GET {{Connectdemo8_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

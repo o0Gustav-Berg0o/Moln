@@ -35,7 +35,6 @@ namespace Moln.KeyVault
             var client = new SecretClient(new Uri(keyVaultURL.Value!.ToString()), credential);
 
             //Key vault test code
-
           
 
             _client = client;

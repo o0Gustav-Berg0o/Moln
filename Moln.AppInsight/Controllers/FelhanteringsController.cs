@@ -15,6 +15,7 @@ namespace Moln.AppInsight.Controllers
         {
             _logger = logger;
         }
+
         [HttpGet]        
         public string Get()
         {
