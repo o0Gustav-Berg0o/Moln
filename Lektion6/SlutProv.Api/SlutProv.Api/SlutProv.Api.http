@@ -1,0 +1,11 @@
+@SlutProv.Api_HostAddress = http://localhost:5124
+
+GET {{SlutProv.Api_HostAddress}}/api/blob/list
+Accept: application/json
+
+###
+
+GET {{SlutProv.Api_HostAddress}}/api/database/list
+Accept: application/json
+
+###
