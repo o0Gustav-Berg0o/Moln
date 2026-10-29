@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="EmailService/EmailService.csproj" />
+  <Project Path="InventoryService/InventoryService.csproj" />
+  <Project Path="InvoiceService/InvoiceService.csproj" />
+  <Project Path="OrderPublisher/OrderPublisher.csproj" />
+  <Project Path="Shared/Shared.csproj" />
+  <Project Path="ShippingService/ShippingService.csproj" />
+</Solution>
